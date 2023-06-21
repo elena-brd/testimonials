@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200;300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    line-height: 1.5;
+    font-size: 13px;
+    background: #f4f4f4;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1140px;
+    margin: 100px auto;
+}
+
+.card {
+    cursor: pointer;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 10px -3px rgba(172, 172, 172, 0.5);
+    padding: 1rem 1.5rem;
+    transition: all 0.4s ease-in;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 10px -3px rgba(120, 54, 227, 0.5);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+}
+
+.card-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #9d4edd;
+    margin-right: 0.8rem;
+}
+
+.card-header p {
+    opacity: 0.8;
+}
+
+.card-bg-purple {
+    background: #7b23c9;
+    color: #fff;
+}
+
+.card-bg-gray {
+    background: #3e3e3e;
+    color: #fff;
+}
+
+.card-bg-dark {
+    background: #100c1f;
+    color: #fff;
+}
+
+.card-title-main-review {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin: 1rem 0;
+}
+
+.card-review-quote {
+    opacity: 0.8;
+}
+
+
+.card:nth-of-type(1) {
+    grid-column: 1/3;
+}
+
+.card:nth-of-type(4) {
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+
+.card:nth-of-type(5) {
+    grid-column: 4/5;
+    grid-row: 1/3;
+}
+
+@media(max-width:768px) {
+    .testimonials {
+        display: block;
+        max-width: 980px;
+    }
+
+    .card {
+        margin: 2rem 5rem;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+}
